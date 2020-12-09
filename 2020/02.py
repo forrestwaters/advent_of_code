@@ -1,12 +1,13 @@
-with open("day2.txt", "r") as f:
-    lines = [x.rstrip('\n') for x in f.readlines()]
+from utils import read_input
+
+lines = read_input("day2.txt")
 
 valid = 0
 for line in lines:
-    _ = line.split(':')
-    count, letter = _[0].split(' ')
-    min, max = count.split('-')
-    pw = _[1].strip(' ')
+    _ = line.split(":")
+    count, letter = _[0].split(" ")
+    min, max = count.split("-")
+    pw = _[1].strip(" ")
     l_found = 0
     for char in pw:
         if char == letter:
@@ -18,10 +19,10 @@ print(valid)
 
 valid = 0
 for line in lines:
-    _ = line.split(':')
-    count, letter = _[0].split(' ')
-    idx1, idx2 = count.split('-')
-    pw = _[1].strip(' ')
+    _ = line.split(":")
+    count, letter = _[0].split(" ")
+    idx1, idx2 = count.split("-")
+    pw = _[1].strip(" ")
     l_found = False
     try:
         if pw[int(idx1) - 1] == letter:

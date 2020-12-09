@@ -28,8 +28,9 @@ def part2(arr):
                     print(arr[idx1] * arr[idx2] * arr[idx3])
                 idx3 += 1
 
+
 with open("day1.txt", "r") as f:
-    data = [int(x.rstrip('\n')) for x in f.readlines() if x.rstrip('\n').isdigit()]
+    data = [int(x.rstrip("\n")) for x in f.readlines() if x.rstrip("\n").isdigit()]
 
 part1(data)
 part2(data)
