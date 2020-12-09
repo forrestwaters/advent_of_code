@@ -1,4 +1,4 @@
-from utils import read_input
+from .utils import read_input
 
 
 bps = read_input("day5.txt")

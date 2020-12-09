@@ -1,4 +1,4 @@
-from utils import read_input
+from .utils import read_input
 
 lines = read_input("day2.txt")
 
